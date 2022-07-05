@@ -87,7 +87,6 @@ const App = () => {
   const [data, setData] = useState([])
   const [renderCards, setRenderCards] = useState(false)
   const [showInfo, setShowInfo] = useState(false)
-  const [id, setId] = useState()
   const hook = () => {
     console.log('effect')
     axios
