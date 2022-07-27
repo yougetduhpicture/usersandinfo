@@ -7,7 +7,7 @@ const People = (props) => {
         return (
           <div key={person.id}>
              <Card name={person.name} email={person.email} phone={person.phone}/>
-              <Button id={person.id} handleClick={props.handleClick}text={'MORE INFO'}/>
+              <Button id={person.id} handleClick={props.handleClick} text={'MORE INFO'}/>
           </div> 
         )
       })

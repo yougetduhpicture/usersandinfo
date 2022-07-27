@@ -6,48 +6,38 @@ import InfoCard from './components/InfoCard'
 import Button from './components/Button'
 import People from './components/People'
 
-
-
 //APP
 const App = () => {
-
-
   const [data, setData] = useState([])
 
   const [renderCards, setRenderCards] = useState(false)
   const [showInfo, setShowInfo] = useState(false)
   const [chosenPerson, setChosenPerson] = useState('')
 
-
 //FETCHING THE DATA
   const hook = () => {
-    console.log('effect')
+ 
     axios
       .get('https://jsonplaceholder.typicode.com/users')
       .then(response => {
-        console.log('promise fulfilled')
         setData(response.data)
         setRenderCards(true)
       })
   }
   useEffect(hook, [])
 
-  console.log('render', data.length, 'users')
-  console.log(data)
-
 //CLICK HANDLER
-const handleClick = (event, id) =>{
-  console.log(event.target.value)
+const handleClick = (id) =>{
   setChosenPerson(id - 1)
   setShowInfo(true)
 }
-
+//2nd CLICK HANDLER
 const handleClick2 = () =>{
 
   setShowInfo(false)
  }
 
-  //APP RENDER
+//APP RENDER
 if (renderCards === true && showInfo === false){
   return(
     <div>
@@ -70,7 +60,4 @@ if (renderCards === true && showInfo === false){
   }
 }
 
-
-
 export default App;
-
