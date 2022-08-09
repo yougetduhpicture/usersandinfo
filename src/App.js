@@ -33,14 +33,13 @@ const handleClick = (id) =>{
 }
 //2nd CLICK HANDLER
 const handleClick2 = () =>{
-
   setShowInfo(false)
  }
 
 //APP RENDER
 if (renderCards === true && showInfo === false){
   return(
-    <div>
+    <div className='flex-container'>
       <People data={data} handleClick={handleClick} setChosenPerson={setChosenPerson}/>
     </div>
     )

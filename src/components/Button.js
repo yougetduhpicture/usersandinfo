@@ -1,7 +1,9 @@
 const Button = (props)=> {
+
     return(
     <div>
-      <button onClick={() => props.handleClick(props.id)} value={props.id}>{props.text}</button>
+      <button className='Button' 
+      onClick={() => props.handleClick(props.id)} value={props.id}>{props.text}</button>
     </div>
   )
   }

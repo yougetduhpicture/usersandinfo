@@ -5,8 +5,7 @@ const Card = (props) => {
         <h3>Contact: </h3>
         <p>E-mail: {props.email}</p>
         <p>Telephone: {props.phone}</p>
-  
-    </div>
+      </div>
     )
   }
   export default Card
